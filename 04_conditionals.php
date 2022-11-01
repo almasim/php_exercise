@@ -1,50 +1,56 @@
 <?php
 
-// $age=17;
-// if($age>=18){
-//     echo 'You are old enouhg to vote';
-// }
-// else{
-//     echo 'you are not old enough';
-// }
-// $t =date("H"); //get current hour
+///Simple if statement
+$age=17;
+if($age>=18){
+    echo 'You are old enouhg to vote <br>';
+}
+else{
+    echo 'you are not old enough <br>';
+}
+$t =date("H"); //get current hour
 
-// if($t<12){
-//     echo 'Good Morning';
-// }else if($t<17){
-//     echo 'Good Afternoon';
-// }else {
-//     echo 'Good Evening';
-// }
 
-// $posts=['First Post'];
+//Else if 
+if($t<12){
+    echo 'Good Morning <br>';
+}else if($t<17){
+    echo 'Good Afternoon <br>';
+}else {
+    echo 'Good Evening <br>';
+}
 
-// if(!empty($posts)){
-//     echo $posts[0];
-// }else{
-//     echo 'No posts';
-// }
+///If it doesnt contain anything it says no posts if it does it will print out the post
+$posts=['First Post'];
 
-// echo !empty($posts)?$posts[0]:'No posts';
+if(!empty($posts)){ //empty($x) if its empty it gives true
+    echo $posts[0].'<br>';
+}else{
+    echo 'No posts <br>';
+}
 
-// $first_post=!empty($posts)?$posts[0]:'No posts';
-// $first_post=!empty($posts)?$posts[0]:null;
-// echo $first_post;
-// $first_post=$posts[0]??null;
-// echo $first_post;
+echo !empty($posts)?$posts[0]:'No posts <br>'; //same but with ternary operator
 
-// $favcolor='red';
-// switch($favcolor){
-//     case 'red':
-//         echo 'Your favorite color is red';
-//         break;
-//     case 'blue':
-//         echo 'Your favorite color is blue';
-//         break;
-//     case 'green':
-//         echo 'Your favorite color is green';
-//         break;
-//     default:
-//     echo 'your Favorite color is not red blue or green';
-// }
+$first_post=!empty($posts)?$posts[0]:'No posts <br>';
+$first_post=!empty($posts)?$posts[0]:null;
+echo $first_post.'<br>';
+$first_post=$posts[0]??null;
+echo $first_post.'<br>';
+
+
+//switch case
+$favcolor='red'; 
+switch($favcolor){
+    case 'red':
+        echo 'Your favorite color is red';
+        break;
+    case 'blue':
+        echo 'Your favorite color is blue';
+        break;
+    case 'green':
+        echo 'Your favorite color is green';
+        break;
+    default:
+    echo 'your Favorite color is not red blue or green';
+}
 ?>
